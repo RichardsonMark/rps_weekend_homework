@@ -1,11 +1,9 @@
 from flask import render_template
 from app import app
 from app.models.rps_player import Player
-# from app.models.rps_game import 
+from app.models.rps_game import Game
 
-# controller routes match http to functions
 @app.route('/')
-# normal functions
 def index():
     return render_template('index.html', title='Welcome', )
 

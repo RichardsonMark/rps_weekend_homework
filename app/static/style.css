@@ -1,3 +1,10 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cornflowerblue;
+}
+
+header {
+    font-size: x-large;
+    color: white;
+    text-align: center;
 }
