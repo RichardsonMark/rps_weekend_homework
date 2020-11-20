@@ -18,3 +18,19 @@ def paper():
 @app.route('/scissors')
 def scissors():
     return render_template('scissors.html', title='Scissors!')
+
+# # setting route to give player 1 choice
+# @app.route('/<p1_choice>')
+# def rps(p1_choice):
+#     options = ["rock", "paper", "scissors"]
+#     player1_choice = p1_choice
+#     pass
+
+# #  setting route to give player 2 choice
+# @app.route('/<p1_choice>/<p2_choice>')
+# def rps(p1_choice, p2_choice):
+#     options = ["rock", "paper", "scissors"]
+#     player2_choice = p2_choice
+#     pass
+
+
