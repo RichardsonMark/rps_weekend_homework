@@ -10,8 +10,5 @@ class Game():
             return None
         elif player1.player_choice == "rock" and player2.player_choice == "scissors" or player1.player_choice == "paper" and player2.player_choice == "rock" or player1.player_choice == "scissors" and player2.player_choice == "paper":
             return "Player 1"
-        # p1 wins
-        # elif p1 choice = rock, and p2 choice = paper or
-        # p1 choice = paper, and p2 choice = scissors, or
-        # p1 choice = scissors and p2 choice = rock, 
-        # p2 wins
+        elif player1.player_choice == "rock" and player2.player_choice == "paper" or player1.player_choice == "paper" and player2.player_choice == "scissors" or player1.player_choice == "scissors" and player2.player_choice == "rock":
+            return "Player 2"
