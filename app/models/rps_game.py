@@ -8,6 +8,11 @@ class Game():
     def determine_winner(self, player1, player2):
         if player1.player_choice == player2.player_choice:
             return None
-        # elif 
-        
-
+        # elif p1 choice = rock and p2 choice = scissors or
+        # p1 choice = paper and p2 choice = rock or
+        # p1 choice = scissors and p2 choice = paper
+        # p1 wins
+        # elif p1 choice = rock, and p2 choice = paper or
+        # p1 choice = paper, and p2 choice = scissors, or
+        # p1 choice = scissors and p2 choice = rock, 
+        # p2 wins
