@@ -1,27 +1,30 @@
 <html>
-    <head>
-      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-      <title>{{ title }} - Rock! Paper! Scissors!</title>
-    </head>
-    <body>
-      <header>
-        <div id="grid-container-base-header">
-          <section class="header_home">
-          <button class="menu_button"><a href="/" title="home">Home</a></button>
-          <button class="menu_button"><a href="/play" title="vs computer">vs 🖥</a></button>
-         </section>
 
-          <section class="header_title">
-          <h1>🤘 🧻  ✂️</h1>
-          <h3>A game of chance and psychological skill</h3>
-          </section>
-        </div>
-    </header>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>{{ title }} - Rock! Paper! Scissors!</title>
+</head>
+
+<body>
+  <header>
+    <div id="grid-container-base-header">
+      <section class="header_home">
+        <button class="menu_button"><a href="/" title="home">Home</a></button>
+        <button class="menu_button"><a href="/play" title="vs computer">vs 🖥</a></button>
+      </section>
+
+      <section class="header_title">
+        <h1>🤘 🧻 ✂️</h1>
+        <h3>A game of chance and psychological skill</h3>
+      </section>
+    </div>
+  </header>
 
 
 
-        {% block content %}
-        {% endblock %}
-    </body>
-    <footer>&copy; 2020 CodeClan / Mark Richardson</footer>
+  {% block content %}
+  {% endblock %}
+</body>
+<footer>&copy; 2020 CodeClan / Mark Richardson</footer>
+
 </html>

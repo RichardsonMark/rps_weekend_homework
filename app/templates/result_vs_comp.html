@@ -2,13 +2,13 @@
 
 {% block content %}
 <section class="result">
-<h1>Result</h1>
-{% if result_vs_comp == None %}
-<h2>No winner!</h2>
-<h3>Both players chose the same, so it's a draw!</h3>
-{% else %}
-<h2>{{ result_vs_comp }} wins!!!</h2>
-<h3>{{ name }} chose {{ player_choice }} and the computer chose {{ comp_choice }}.</h3>
-{% endif %}
+    <h1>Result</h1>
+    {% if result_vs_comp == None %}
+    <h2>No winner!</h2>
+    <h3>Both players chose the same, so it's a draw!</h3>
+    {% else %}
+    <h2>{{ result_vs_comp }} wins!!!</h2>
+    <h3>{{ name }} chose {{ player_choice }} and the computer chose {{ comp_choice }}.</h3>
+    {% endif %}
 </section>
 {% endblock %}

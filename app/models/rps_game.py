@@ -14,7 +14,7 @@ class Game():
             return "Player 2"
 
 
-# play against the computer
+# play against the computer and determine the winner of the game. As above, rules =  "rock" => "scissors", "scissors" => "paper", "paper" => "rock". draw should be None type
     def determine_winner_vs_comp(self, player1, player2):
         if self.player1.player_choice == self.player2.player_choice:
             return None

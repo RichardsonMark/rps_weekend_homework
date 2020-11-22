@@ -30,14 +30,14 @@ def rps(p1_choice, p2_choice):
     return render_template('result.html', result = result, p1_choice = player1.player_choice, p2_choice = player2.player_choice, title='Result!')
 
 
-# #  setting route to play against the computer
+# #  setting route to allow play against the computer
 @app.route('/play')
 def rps_play():
     options = ["rock", "paper", "scissors"]
     return render_template('/play.html', options=options, title='Play against the computer!')
 
 
-# #  setting route to play against the computer
+# #  setting route to return result vs the computer
 @app.route('/play/against_computer', methods=['POST'])
 def rps_comp():
     player1 = Player(request.form['name'], request.form['options'])

@@ -2,19 +2,19 @@
 
 {% block content %}
 <section class="choose">
-<p>Player 1, complete the following to challenge the processing might of the computer:</p>
-<div class="player_input">
-<form action="/play/against_computer", method="POST">
-    <p><label for="name">Player 1 name:</label>
-    <input type="text" name="name" id="name"></p>
-    <p><label for="options">Player 1 choice:</label>
-        <select name=options id=options>
-        {% for option in options %}
-        <option value = "{{option}}" SELECTED>{{option}}</option>"
-        {% endfor %}
-    </select></p>
-    <input type = "submit" value = "Submit"/>
-</form>
-</div>
+    <p>Player 1, complete the following to challenge the processing might of the computer:</p>
+    <div class="player_input">
+        <form action="/play/against_computer" , method="POST">
+            <p><label for="name">Player 1 name:</label>
+                <input type="text" name="name" id="name"></p>
+            <p><label for="options">Player 1 choice:</label>
+                <select name=options id=options>
+                    {% for option in options %}
+                    <option value="{{option}}" SELECTED>{{option}}</option>"
+                    {% endfor %}
+                </select></p>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
 </section>
 {% endblock %}
