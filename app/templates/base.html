@@ -5,11 +5,22 @@
     </head>
     <body>
       <header>
-        <h1>🤘 🧻  ✂️</h1>
-        <h3>A game of chance and psychological skill</h3>
+        <div id="grid-container-base-header">
+          <section class="header_home">
+          <button class="home_button"><a href="/" title="home">Home</a></button>
+         </section>
+
+          <section class="header_title">
+          <h1>🤘 🧻  ✂️</h1>
+          <h3>A game of chance and psychological skill</h3>
+          </section>
+        </div>
     </header>
+
+
 
         {% block content %}
         {% endblock %}
     </body>
+    <footer>&copy; 2020 CodeClan / Mark Richardson</footer>
 </html>

@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>You chose ✂️/h1>
-
-
+<section class="choose">
+    <p>Player 2, it's your turn to choose:</p>
+    <div class="game_object">
+      <button><a href="/scissors/rock" title="rock">🤘</a></button>
+      <button><a href="/scissors/paper" title="paper">🧻</a></button>
+      <button><a href="/scissors/scissors" title="scissors">✂️</a></button>
+    </ul>
+  </section>
 {% endblock %}

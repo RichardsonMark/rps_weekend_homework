@@ -1,10 +1,95 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: cornflowerblue;
+    background-color: whitesmoke;
 }
 
 header {
     font-size: x-large;
+    color: darkslateblue;
+    text-align: center;
+    background-color: lightblue;
+    padding: 5px;
+}
+
+body > header > div > section > button > a {
+    text-align: left;
+    font-size: 22px;
     color: white;
+} 
+
+h1, h2, h3, p, li {
+    color: darkslateblue;
+}
+
+a {
+    text-decoration: none;
+    color: darkslateblue;
+}
+
+footer {
+    padding: 16px;
+    background-color: lightblue;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.home_button {
+    border: blue 2px;
+    border-radius: 4px;
+    background-color: darkslateblue;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header_home {
+    grid-column: 1;
+}
+
+.header_title {
+    grid-column: 2;
+}
+
+.rules {
+    grid-column: 2;
+}
+
+.choose {
+    font-size: 26;
+    font-weight: bold;
+    text-align: center;
+    color: darkslateblue;
+}
+
+.game_object {
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.game_object > button {
+    border: blue 2px;
+    border-radius: 4px;
+    background-color: darkslateblue;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 42px;
+}
+
+.result {
     text-align: center;
 }
+
+#grid-container-content {
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+  }
+
+#grid-container-base-header {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+  }

@@ -6,9 +6,9 @@ class Game():
 
 # function to determine the winner of the game. rules =  "rock" => "scissors", "scissors" => "paper", "paper" => "rock". draw should be None type
     def determine_winner(self, player1, player2):
-        if player1.player_choice == player2.player_choice:
+        if self.player1.player_choice == self.player2.player_choice:
             return None
-        elif player1.player_choice == "rock" and player2.player_choice == "scissors" or player1.player_choice == "paper" and player2.player_choice == "rock" or player1.player_choice == "scissors" and player2.player_choice == "paper":
+        elif self.player1.player_choice == "rock" and self.player2.player_choice == "scissors" or self.player1.player_choice == "paper" and self.player2.player_choice == "rock" or self.player1.player_choice == "scissors" and self.player2.player_choice == "paper":
             return "Player 1"
-        elif player1.player_choice == "rock" and player2.player_choice == "paper" or player1.player_choice == "paper" and player2.player_choice == "scissors" or player1.player_choice == "scissors" and player2.player_choice == "rock":
+        elif self.player1.player_choice == "rock" and self.player2.player_choice == "paper" or self.player1.player_choice == "paper" and self.player2.player_choice == "scissors" or self.player1.player_choice == "scissors" and self.player2.player_choice == "rock":
             return "Player 2"

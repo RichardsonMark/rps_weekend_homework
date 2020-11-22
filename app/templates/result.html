@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+<section class="result">
 <h1>Result</h1>
 {% if result == None %}
-<h2>Both players chose the same, so it's a draw!</h2>
+<h2>No winner!</h2>
+<h3>Both players chose the same, so it's a draw!</h3>
 {% else %}
-<h2>{{ result }} wins!!!</h2>
-
+<h2>Congratulations {{ result }}, you win!!!</h2>
+<h3>Player 1 chose {{ p1_choice }} and Player 2 chose {{ p2_choice }}.</h3>
 {% endif %}
+</section>
 {% endblock %}
