@@ -4,4 +4,3 @@ class Player():
         self.name = name
         self.player_choice = player_choice
         
-

@@ -12,3 +12,13 @@ class Game():
             return "Player 1"
         elif self.player1.player_choice == "rock" and self.player2.player_choice == "paper" or self.player1.player_choice == "paper" and self.player2.player_choice == "scissors" or self.player1.player_choice == "scissors" and self.player2.player_choice == "rock":
             return "Player 2"
+
+
+# play against the computer
+    def determine_winner_vs_comp(self, player1, player2):
+        if self.player1.player_choice == self.player2.player_choice:
+            return None
+        elif self.player1.player_choice == "rock" and self.player2.comp_choice == "scissors" or self.player1.player_choice == "paper" and self.player2.player_choice == "rock" or self.player1.player_choice == "scissors" and self.player2.player_choice == "paper":
+            return "Player 1"
+        elif self.player1.player_choice == "rock" and self.player2.player_choice == "paper" or self.player1.player_choice == "paper" and self.player2.player_choice == "scissors" or self.player1.player_choice == "scissors" and self.player2.player_choice == "rock":
+            return "Computer"

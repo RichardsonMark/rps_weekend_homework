@@ -19,6 +19,7 @@ class TestGame(unittest.TestCase):
 #    @unittest.skip("Delete this line to run the test")
     def test_player1_winner_rock(self):
         self.player2 = Player("Player 2", "scissors")
+        self.game = Game(self.player1, self.player2)
         self.assertEqual("rock", self.player1.player_choice)
         self.assertEqual("scissors", self.player2.player_choice)
         self.assertEqual("Player 1", self.game.determine_winner(self.player1, self.player2))
@@ -27,6 +28,7 @@ class TestGame(unittest.TestCase):
     def test_player1_winner_paper(self):
         self.player1 = Player("Player 1", "paper")
         self.player2 = Player("Player 2", "rock")
+        self.game = Game(self.player1, self.player2)
         self.assertEqual("paper", self.player1.player_choice)
         self.assertEqual("rock", self.player2.player_choice)
         self.assertEqual("Player 1", self.game.determine_winner(self.player1, self.player2))
@@ -35,6 +37,7 @@ class TestGame(unittest.TestCase):
     def test_player1_winner_scissors(self):
         self.player1 = Player("Player 1", "scissors")
         self.player2 = Player("Player 2", "paper")
+        self.game = Game(self.player1, self.player2)
         self.assertEqual("scissors", self.player1.player_choice)
         self.assertEqual("paper", self.player2.player_choice)
         self.assertEqual("Player 1", self.game.determine_winner(self.player1, self.player2))
@@ -44,6 +47,7 @@ class TestGame(unittest.TestCase):
     def test_player2_winner_rock(self):
         self.player1 = Player("Player 1", "rock")       
         self.player2 = Player("Player 2", "paper")
+        self.game = Game(self.player1, self.player2)
         self.assertEqual("rock", self.player1.player_choice)
         self.assertEqual("paper", self.player2.player_choice)
         self.assertEqual("Player 2", self.game.determine_winner(self.player1, self.player2))
@@ -52,6 +56,7 @@ class TestGame(unittest.TestCase):
     def test_player2_winner_paper(self):
         self.player1 = Player("Player 1", "paper")
         self.player2 = Player("Player 2", "scissors")
+        self.game = Game(self.player1, self.player2)
         self.assertEqual("paper", self.player1.player_choice)
         self.assertEqual("scissors", self.player2.player_choice)
         self.assertEqual("Player 2", self.game.determine_winner(self.player1, self.player2))
@@ -60,6 +65,25 @@ class TestGame(unittest.TestCase):
     def test_player2_winner_scissors(self):
         self.player1 = Player("Player 1", "scissors")
         self.player2 = Player("Player 2", "rock")
+        self.game = Game(self.player1, self.player2)
         self.assertEqual("scissors", self.player1.player_choice)
         self.assertEqual("rock", self.player2.player_choice)
         self.assertEqual("Player 2", self.game.determine_winner(self.player1, self.player2))
+
+#    @unittest.skip("Delete this line to run the test")
+    def test_play_against_computer(self):
+        self.player1 = Player("Player 1", "scissors")
+        self.player2 = Player("Computer", "rock")
+        self.game = Game(self.player1, self.player2)
+        self.assertEqual("scissors", self.player1.player_choice)
+        self.assertEqual("rock", self.player2.player_choice)
+        self.assertEqual("Computer", self.game.determine_winner_vs_comp(self.player1, self.player2))
+
+#   @unittest.skip("Delete this line to run the test")
+    def test_no_winner_against_computer(self):
+        self.player1 = Player("Player 1", "rock")
+        self.player2 = Player("Computer", "rock")
+        self.game = Game(self.player1, self.player2)
+        self.assertEqual("rock", self.player1.player_choice)
+        self.assertEqual("rock", self.player2.player_choice)
+        self.assertEqual(None, self.game.determine_winner_vs_comp(self.player1, self.player2))
